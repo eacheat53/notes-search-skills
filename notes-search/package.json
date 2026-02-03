@@ -1,0 +1,29 @@
+{
+    "name": "notes-search",
+    "version": "1.0.0",
+    "description": "CLI tool for searching Markdown notes with lexical and semantic search",
+    "type": "module",
+    "bin": {
+        "notes-search": "./dist/cli.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/cli.ts",
+        "start": "node dist/cli.js"
+    },
+    "dependencies": {
+        "commander": "^12.0.0",
+        "flexsearch": "^0.7.43",
+        "gray-matter": "^4.0.3",
+        "glob": "^10.3.10",
+        "@orama/orama": "^2.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.0",
+        "tsx": "^4.7.0",
+        "typescript": "^5.3.3"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
