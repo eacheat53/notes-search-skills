@@ -21,6 +21,13 @@ export interface HybridConfig {
     tag_boost: number;
 }
 
+export interface RerankConfig {
+    enabled: boolean;
+    base_url: string;
+    model: string;
+    top_n: number;
+}
+
 export interface Config {
     notes_dir: string;
     max_results: number;
@@ -33,6 +40,7 @@ export interface Config {
     index_dir: string;
     auto_update: boolean;
     hybrid: HybridConfig;
+    rerank: RerankConfig;
 }
 
 const DEFAULT_CONFIG: Config = {
@@ -63,6 +71,12 @@ const DEFAULT_CONFIG: Config = {
         lexical_weight: 1.0,
         semantic_weight: 0.7,
         tag_boost: 1.2,
+    },
+    rerank: {
+        enabled: true,
+        base_url: 'http://localhost:8000/v1/rerank',
+        model: 'bge-reranker-v2-m3',
+        top_n: 5,
     },
 };
 

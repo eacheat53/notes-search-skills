@@ -12,13 +12,15 @@
         "start": "node dist/cli.js"
     },
     "dependencies": {
+        "@orama/orama": "^2.0.0",
+        "better-sqlite3": "^12.10.0",
         "commander": "^12.0.0",
         "flexsearch": "^0.7.43",
-        "gray-matter": "^4.0.3",
         "glob": "^10.3.10",
-        "@orama/orama": "^2.0.0"
+        "gray-matter": "^4.0.3"
     },
     "devDependencies": {
+        "@types/better-sqlite3": "^7.6.13",
         "@types/node": "^20.11.0",
         "tsx": "^4.7.0",
         "typescript": "^5.3.3"
